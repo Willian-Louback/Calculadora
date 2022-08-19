@@ -29,7 +29,7 @@ main{
     flex-direction: column;
 }
 .screenCalc{
-    display: inline-block;
+    display: flex;
     height: 85px;
     width: 90%;
     border: 2px solid black;
@@ -37,6 +37,7 @@ main{
     background-color: white;
     border-radius: 3px;
     box-shadow: inset -1.5px 1.5px;
+    align-items: center;
 }
 .gridUtilitarios{
     display: grid;

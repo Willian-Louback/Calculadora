@@ -84,11 +84,23 @@ const clonarOperadores = () =>{
 }
 
 clonarOperadores();
+
+//Limite da Tela
+
+function limiteTela(){
+    if(mostrarTela.length > 7 && mostrarTela.length < 11){
+        spanScreen.style.fontSize = "50px";
+        spanScreen.length = 11;
+    }else if(mostrarTela.length >= 11){
+        mostrarTela = mostrarTela.slice(0, -1);
+        spanScreen.innerHTML = mostrarTela;
+    }else if(mostrarTela.length <= 7){
+        spanScreen.style.fontSize = "70px";
+    }
+}
+
 //variavel para envio
     const numbers = document.getElementsByClassName("buttons");
-    const enviar = numbers[11];
-    enviar.value = numeros[11];
-
     const utilitarioApagar = document.getElementsByClassName("utilitarios");
 
     let mostrarTela = "";
@@ -120,6 +132,7 @@ function operacao(){
             sinal = operadorClick[0];
             mostrarTela = mostrarTela + operadorClick[0].value;
             spanScreen.innerHTML = mostrarTela;
+            limiteTela();
         }
     }
     operadorClick[1].onclick = function(){
@@ -128,6 +141,7 @@ function operacao(){
             sinal = operadorClick[1];
             mostrarTela = mostrarTela + operadorClick[1].value;
             spanScreen.innerHTML = mostrarTela;
+            limiteTela();
         }
     }
     operadorClick[2].onclick = function(){
@@ -136,6 +150,7 @@ function operacao(){
             sinal = operadorClick[2];
             mostrarTela = mostrarTela + operadorClick[2].value;
             spanScreen.innerHTML = mostrarTela;
+            limiteTela();
         } 
         //Número negativo
         /*else if(mostrarTela.length === 0){
@@ -148,6 +163,7 @@ function operacao(){
             sinal = operadorClick[3];
             mostrarTela = mostrarTela + operadorClick[3].value;
             spanScreen.innerHTML = mostrarTela;
+            limiteTela();
         }
     }
 }
@@ -168,6 +184,7 @@ function valorNumeros(){
     numbers[10].value = numeros[10];
 
     numbers[0].onclick = function(){
+        spanScreen.style.color = "black";
         if(ativador !== "on"){
             number = number + numbers[0].value;
             mostrarTela = mostrarTela + numbers[0].value;
@@ -179,8 +196,10 @@ function valorNumeros(){
             spanScreen.innerHTML = mostrarTela;
             valor2 = parseInt(valor2) + numbers[0].value;
         }
+        limiteTela();
     }
     numbers[1].onclick = function(){
+        spanScreen.style.color = "black";
         if(ativador !== "on"){
             number = number + numbers[1].value;
             mostrarTela = mostrarTela + numbers[1].value;
@@ -192,8 +211,10 @@ function valorNumeros(){
             spanScreen.innerHTML = mostrarTela;
             valor2 = parseInt(valor2) + numbers[1].value;
         }
+        limiteTela();
     }
     numbers[2].onclick = function(){
+        spanScreen.style.color = "black";
         if(ativador !== "on"){
             number = number + numbers[2].value;
             mostrarTela = mostrarTela + numbers[2].value;
@@ -205,8 +226,10 @@ function valorNumeros(){
             spanScreen.innerHTML = mostrarTela;
             valor2 = parseInt(valor2) + numbers[2].value;
         }
+        limiteTela();
     }
     numbers[3].onclick = function(){
+        spanScreen.style.color = "black";
         if(ativador !== "on"){
             number = number + numbers[3].value;
             mostrarTela = mostrarTela + numbers[3].value;
@@ -218,8 +241,10 @@ function valorNumeros(){
             spanScreen.innerHTML = mostrarTela;
             valor2 = parseInt(valor2) + numbers[3].value;
         }
+        limiteTela();
     }
     numbers[4].onclick = function(){
+        spanScreen.style.color = "black";
         if(ativador !== "on"){
             number = number + numbers[4].value;
             mostrarTela = mostrarTela + numbers[4].value;
@@ -231,8 +256,10 @@ function valorNumeros(){
             spanScreen.innerHTML = mostrarTela;
             valor2 = parseInt(valor2) + numbers[4].value;
         }
+        limiteTela();
     }
     numbers[5].onclick = function(){
+        spanScreen.style.color = "black";
         if(ativador !== "on"){
             number = number + numbers[5].value;
             mostrarTela = mostrarTela + numbers[5].value;
@@ -244,8 +271,10 @@ function valorNumeros(){
             spanScreen.innerHTML = mostrarTela;
             valor2 = parseInt(valor2) + numbers[5].value;
         }
+        limiteTela();
     }
     numbers[6].onclick = function(){
+        spanScreen.style.color = "black";
         if(ativador !== "on"){
             number = number + numbers[6].value;
             mostrarTela = mostrarTela + numbers[6].value;
@@ -257,8 +286,10 @@ function valorNumeros(){
             spanScreen.innerHTML = mostrarTela;
             valor2 = parseInt(valor2) + numbers[6].value;
         }
+        limiteTela();
     }
     numbers[7].onclick = function(){
+        spanScreen.style.color = "black";
         if(ativador !== "on"){
             number = number + numbers[7].value;
             mostrarTela = mostrarTela + numbers[7].value;
@@ -270,8 +301,10 @@ function valorNumeros(){
             spanScreen.innerHTML = mostrarTela;
             valor2 = parseInt(valor2) + numbers[7].value;
         }
+        limiteTela();
     }
     numbers[8].onclick = function(){
+        spanScreen.style.color = "black";
         if(ativador !== "on"){
             number = number + numbers[8].value;
             mostrarTela = mostrarTela + numbers[8].value;
@@ -282,10 +315,11 @@ function valorNumeros(){
             mostrarTela = mostrarTela + numbers[8].value;
             spanScreen.innerHTML = mostrarTela;
             valor2 = parseInt(valor2) + numbers[8].value;
-            console.log(valor2);
         }
+        limiteTela();
     }
     numbers[9].onclick = function(){
+        spanScreen.style.color = "black";
         if(ativador !== "on"){
             number = number + numbers[9].value;
             mostrarTela = mostrarTela + numbers[9].value;
@@ -297,8 +331,10 @@ function valorNumeros(){
             spanScreen.innerHTML = mostrarTela;
             valor2 = parseInt(valor2) + numbers[9].value;
         }
+        limiteTela();
     }
     numbers[10].onclick = function(){
+        spanScreen.style.color = "black";
         if(ativador !== "on"){
             number = number + numbers[10].value;
             mostrarTela = mostrarTela + numbers[10].value;
@@ -310,6 +346,7 @@ function valorNumeros(){
             spanScreen.innerHTML = mostrarTela;
             valor2 = parseInt(valor2) + numbers[10].value;
         }
+        limiteTela();
     }
 }
 
@@ -357,19 +394,29 @@ function funcionais() {
                 valor1 = 0;
             }else if(valor2.length === 0){
                 valor2 = 0;
+            }else if(resposta > 0){
+                resposta = resposta.toString().slice(0, -1);
+                spanScreen.innerHTML = resposta;
+                console.log(resposta);
+                if(resposta.toString().length === 0){
+                    resposta = 0;
+                }
             }
         }
+        limiteTela();
     }
     utilitarioApagaTudo.onclick = function(){
-        if(mostrarTela.length > 0){
+        if(mostrarTela.length > 0 && resposta === 0){
             mostrarTela = "";
             spanScreen.innerHTML = mostrarTela;
             ativador = "", sinal = "";
             valor1 = 0;
             valor2 = 0;
-        }else{
-            console.log("nada aqui");
+        }else if(resposta !== 0){
+            resposta = 0;
+            spanScreen.innerHTML = "";
         }
+        limiteTela();
     }
     incrementar.onclick = function(){
         if(mostrarTela.length !== 0 && ativador !== "on"){
@@ -388,6 +435,7 @@ function funcionais() {
             mostrarTela = valores.toString();
             spanScreen.innerHTML = mostrarTela;
         }
+        limiteTela();
     }
     decrementar.onclick = function(){
         if(mostrarTela.length !== 0 && ativador !== "on"){
@@ -406,6 +454,7 @@ function funcionais() {
             mostrarTela = valores.toString();
             spanScreen.innerHTML = mostrarTela;
         }
+        limiteTela();
     }
 }
 
